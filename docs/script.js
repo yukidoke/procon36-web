@@ -6,6 +6,8 @@ function showContent() {
     const contentDiv = document.getElementById("articleContent");
 
     try {
+        console.log(inputPassword);
+        console.log(contentDiv);
         const decryptedBytes = CryptoJS.AES.decrypt(encryptedData, inputPassword);
         const decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
 
