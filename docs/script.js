@@ -1,13 +1,11 @@
 function showContent() {
-    const encryptedData = "sK7PLckcWB1zFPh3XncVuKNjGuf9XBLyCu+z+pzf40nMuHyHiOWzsMb5dIU5ax2ILi6QiE2KMTlVpgS209Q37fjkmO7N4pdu+ut9MoBkxr0vZsu/xBmWx9mBAg7iA4b3kvQ30dbW7E8bXO/16haDwA==";
+    const encryptedData = "U2FsdGVkX1/SNclpUqEDpW8MHmAWmm7s96yzoLhZktOC8KB0FNinkGc2JLETg+P1kR2be6ahNccopmfaCwGhovGwc0Y2rMpYcb0lSD5jQwqht+VJW5XU3KjnWfoBhps6tDth0VPLt+m4qq2Ao8qsqfMGyfmcKQunRQpS4oGNp4Y=";
 
     // ユーザーが入力したパスワードを取得
     const inputPassword = document.getElementById("passwordInput").value;
     const contentDiv = document.getElementById("articleContent");
 
     try {
-        console.log(inputPassword);
-        console.log(contentDiv);
         const decryptedBytes = CryptoJS.AES.decrypt(encryptedData, inputPassword);
         const decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
 
