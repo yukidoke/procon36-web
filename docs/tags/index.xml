@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on yukidoke</title>
-    <link>https://example.org/tags/</link>
+    <link>https://yukidoke.github.io/procon36-web/tags/</link>
     <description>Recent content in Tags on yukidoke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <managingEditor>95288936&#43;yukidoke@users.noreply.github.com (yukidoke)</managingEditor>
     <webMaster>95288936&#43;yukidoke@users.noreply.github.com (yukidoke)</webMaster>
     <copyright>© 2025 yukidoke</copyright>
-    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yukidoke.github.io/procon36-web/tags/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
