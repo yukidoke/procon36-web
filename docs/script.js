@@ -1,11 +1,11 @@
-window.onload = function() {
+window.onload = function () {
     const savedArticle1 = sessionStorage.getItem('decryptedArticle1');
     if (savedArticle1) {
-        document.getElementById('encrypted-text').innerHTML = savedArticle1;
+        document.getElementById('encrypted-text1').innerHTML = savedArticle1;
     }
     const savedArticle2 = sessionStorage.getItem('decryptedArticle2');
     if (savedArticle2) {
-        document.getElementById('encrypted-text').innerHTML = savedArticle2;
+        document.getElementById('encrypted-text2').innerHTML = savedArticle2;
     }
     if (savedArticle1 && savedArticle2) {
         document.getElementById('password-gate').style.display = 'none';
