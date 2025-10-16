@@ -1,25 +1,924 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html lang="ja" dir="ltr" class="scroll-smooth" data-default-appearance="dark" data-auto-appearance="true">
 
 <head>
-    <meta charset="UTF-8">
-    <title>限定公開記事</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <meta name="generator" content="Hugo 0.151.0">
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+  <meta http-equiv="content-language" content="ja">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+
+  <title>yukidoke</title>
+  <meta name="title" content="yukidoke">
+
+
+  <meta name="description" content="限定公開記事: 決して参加記には値しないもの">
+
+
+
+  <link rel="canonical" href="https://example.org/">
+
+  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="yukidoke" />
+
+  <link rel="alternate" type="application/json" href="/index.json" title="yukidoke" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link type="text/css" rel="stylesheet"
+    href="/css/main.bundle.min.98419a8acd70d20317a2e59fe3d6d5cace63ac39c2c9cfe6138054e01dc593322cd75672fe516c72914a5924ea71c169c16e45b15001d6170bac03a8695d7f3f.css"
+    integrity="sha512-mEGais1w0gMXouWf49bVys5jrDnCyc/mE4BU4B3FkzIs11Zy/lFscpFKWSTqccFpwW5FsVAB1hcLrAOoaV1/Pw==">
+
+
+
+  <script type="text/javascript"
+    src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script defer type="text/javascript" id="script-bundle"
+    src="/js/main.bundle.min.e4b2d9aece2aa7a740c3ee7a0efc5acf56b204868ab0fb5bba9be32aed1cd0c9262979d98050759068d58144297f74b12ed05b5173cf2df2e6c097a066b984a8.js"
+    integrity="sha512-5LLZrs4qp6dAw&#43;56Dvxaz1ayBIaKsPtbupvjKu0c0MkmKXnZgFB1kGjVgUQpf3SxLtBbUXPPLfLmwJegZrmEqA=="
+    data-copy="コピー" data-copied="コピーしました"></script>
+
+
+
+  <script
+    src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js"
+    integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:url" content="https://example.org/">
+  <meta property="og:site_name" content="yukidoke">
+  <meta property="og:title" content="#ifdef DEBUG">
+  <meta property="og:description" content="限定公開記事: 決して参加記には値しないもの">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="#ifdef DEBUG">
+  <meta name="twitter:description" content="限定公開記事: 決して参加記には値しないもの">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https:\/\/example.org\/",
+    "name": "yukidoke",
+    
+    "inLanguage": "ja",
+    "url": "https:\/\/example.org\/",
+    
+    "publisher" : {
+      "@type": "Person",
+      "name": "yukidoke"
+    }
+  }
+  </script>
+
+
+
+
+
+  <meta name="author" content="yukidoke">
+
+
+
+
+
+  <link href="https://github.com/yukidoke" rel="me">
+
+
+
+
+
+  <link href="https://twitter.com/yukidoke_winter" rel="me">
+
+
+
+
+
+
+
+
+  <script
+    src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js"
+    integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link type="text/css" rel="stylesheet"
+    href="/css/components/gallery.a340929bbb811e8e4d4a0f98c05ad907342e2adef8546efa14cc42546f8a8b87827e0e981916da043c388dfc064eeaa0812a210e6cf70be45e22cd385a560ba1.css"
+    integrity="sha512-o0CSm7uBHo5NSg&#43;YwFrZBzQuKt74VG76FMxCVG&#43;Ki4eCfg6YGRbaBDw4jfwGTuqggSohDmz3C&#43;ReIs04WlYLoQ==">
+
+
+  <script defer type="text/javascript"
+    src="/lib/packery/packery.pkgd.min.8b0cbb30a72acb6a0188f690a3768e9c531f056dcf18df8d739ececb994387d28137ed684b2f23da6df5a0c416eb4f8818d5db4493419a9b97c7452ac602fbd4.js"
+    integrity="sha512-iwy7MKcqy2oBiPaQo3aOnFMfBW3PGN&#43;Nc57Oy5lDh9KBN&#43;1oSy8j2m31oMQW60&#43;IGNXbRJNBmpuXx0UqxgL71A=="></script>
+
+
+
+  <script type="text/javascript"
+    src="/js/shortcodes/gallery.min.066f04f8dacc3930df93010e4f91004c55c8971379324510b9703d5f02dcb9c0379e0d9be24c4da79e2a004cdf006f5d2990ef8899c528459515d1833b5c9459.js"
+    integrity="sha512-Bm8E&#43;NrMOTDfkwEOT5EATFXIlxN5MkUQuXA9XwLcucA3ng2b4kxNp54qAEzfAG9dKZDviJnFKEWVFdGDO1yUWQ=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet"
+    href="/css/repo-cards.min.a4b7d5f916f84c0b09c660c2673c085b1a97daea9f26c3460ed55d601999f51e64cd81e952cb171167efbfd3c2d26605105b603a9083c058ed16d06acbdd0483.css"
+    integrity="sha512-pLfV&#43;Rb4TAsJxmDCZzwIWxqX2uqfJsNGDtVdYBmZ9R5kzYHpUssXEWfvv9PC0mYFEFtgOpCDwFjtFtBqy90Egw==">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
-<body>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content">
+      <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+      メインコンテンツへスキップ
+    </a>
+  </div>
 
-    <h1>限定公開記事</h1>
 
-    <p>ここにはまだなにもない</p>
-    <p>名刺に記載されたパスワードを入力してください。</p>
+  <div class="min-h-[148px]"></div>
+  <div class="fixed inset-x-0 pl-[24px] pr-[24px] z-100">
+    <div id="menu-blur"
+      class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl">
+    </div>
+    <div class="relative max-w-[64rem] ml-auto mr-auto">
 
-    <input type="password" id="passwordInput" placeholder="パスワード">
-    <button onclick="showContent()">記事を読む</button>
 
-    <div id="articleContent" style="margin-top: 20px;"></div>
 
-    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+      <div
+        class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 pt-[2px] pr-0 pb-[3px] pl-0">
+
+
+
+
+        <div>
+          <a href="/" class="flex">
+            <span class="sr-only">yukidoke</span>
+
+            <img src="/img/yuki.png" width="128" height="128"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="yukidoke">
+
+          </a>
+        </div>
+
+
+        <div class="flex flex-1 items-center justify-between">
+          <nav class="flex space-x-3">
+
+            <a href="/" class="text-base font-medium">
+              yukidoke
+            </a>
+
+          </nav>
+
+          <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+
+
+
+
+
+
+
+
+            <div class=" flex items-center">
+              <button id="appearance-switcher" aria-label="Dark mode switcher" type="button"
+                class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                <div class="flex items-center justify-center dark:hidden">
+                  <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                  <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor"
+                        d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z" />
+                    </svg>
+                  </span>
+                </div>
+              </button>
+            </div>
+
+          </nav>
+
+
+          <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+            <span></span>
+
+
+
+
+
+
+
+
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+              <div class="flex items-center justify-center dark:hidden">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z" />
+                  </svg>
+                </span>
+              </div>
+              <div class="items-center justify-center hidden dark:flex">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z" />
+                  </svg>
+                </span>
+              </div>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="-my-2 md:hidden">
+          <div id="menu-button" class="block">
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+  <script type="text/javascript"
+    src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+    integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+    data-blur-id="menu-blur"></script>
+
+
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+
+
+      <article>
+
+
+
+
+
+
+
+
+
+        <div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+        <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+
+
+          <img id="background-image" src="/background.svg" alt="Background Image"
+            class="absolute inset-0 w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+          </div>
+          <div
+            class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+          </div>
+        </div>
+
+
+        <div id="background-blur"
+          class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+
+
+        <script type="text/javascript"
+          src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+          integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+          data-blur-id="background-blur" data-image-id="background-image" data-image-url="/background.svg"></script>
+
+
+
+
+
+        <header id="single_header" class="mt-5 max-w-prose">
+
+          <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+            #ifdef DEBUG
+          </h1>
+          <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="flex flex-row flex-wrap items-center">
+
+
+              <time datetime="2025-10-16T00:00:00&#43;00:00">2025 10月 16</time>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="flex author">
+
+
+
+
+
+
+
+
+
+            <img class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4" width="96" height="96" alt="yukidoke"
+              src="/img/yuki_hu_2d7d68e82f1303ac.png">
+
+
+            <div class="place-self-center">
+
+              <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+                著者
+              </div>
+              <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+                yukidoke
+              </div>
+
+
+              <div class="text-2xl sm:text-lg">
+                <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+
+
+                  <a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href="https://github.com/yukidoke"
+                    target="_blank" aria-label="Github" title="Github" rel="me noopener noreferrer"><span
+                      class="inline-block align-text-bottom"><span class="relative block icon"><svg
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                          <path fill="currentColor"
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+                      </span></span></a>
+
+
+
+                  <a class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+                    href="https://twitter.com/yukidoke_winter" target="_blank" aria-label="X-Twitter" title="X-Twitter"
+                    rel="me noopener noreferrer"><span class="inline-block align-text-bottom"><span
+                        class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="currentColor"
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                        </svg></span></span></a>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="mb-5"></div>
+
+
+
+        </header>
+
+
+        <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+
+
+
+
+
+
+          <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8">
+            <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+
+              <details open id="TOCView"
+                class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+                <summary
+                  class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+                  目次
+                </summary>
+                <div class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+                  <nav id="TableOfContents">
+                    <ul>
+                      <li><a href="#はじめに">はじめに</a></li>
+                      <li><a href="#バグ">バグ</a>
+                        <ul>
+                          <li><a href="#connect"><code>Connect</code></a>
+                            <ul>
+                              <li><a href="#排他制御">排他制御</a></li>
+                              <li><a href="#操作のオフセット">操作のオフセット</a></li>
+                              <li><a href="#操作の統合">操作の統合</a></li>
+                              <li><a href="#まとめ">まとめ</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#技術選定">技術選定</a>
+                        <ul>
+                          <li><a href="#言語">言語</a></li>
+                          <li><a href="#ライブラリ">ライブラリ</a></li>
+                          <li><a href="#gui">GUI</a></li>
+                          <li><a href="#評価ツール">評価ツール</a></li>
+                          <li><a href="#webサイト">Webサイト</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#gui-1">GUI</a></li>
+                      <li><a href="#断念した機能">断念した機能</a>
+                        <ul>
+                          <li><a href="#connect-1"><code>Connect</code></a></li>
+                          <li><a href="#webサイト-1">Webサイト</a></li>
+                          <li><a href="#評価ツール-1">評価ツール</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#パスワードについて">パスワードについて</a></li>
+                      <li><a href="#おわりに">おわりに</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </details>
+              <details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+                <summary
+                  class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+                  目次
+                </summary>
+                <div class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+                  <nav id="TableOfContents">
+                    <ul>
+                      <li><a href="#はじめに">はじめに</a></li>
+                      <li><a href="#バグ">バグ</a>
+                        <ul>
+                          <li><a href="#connect"><code>Connect</code></a>
+                            <ul>
+                              <li><a href="#排他制御">排他制御</a></li>
+                              <li><a href="#操作のオフセット">操作のオフセット</a></li>
+                              <li><a href="#操作の統合">操作の統合</a></li>
+                              <li><a href="#まとめ">まとめ</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#技術選定">技術選定</a>
+                        <ul>
+                          <li><a href="#言語">言語</a></li>
+                          <li><a href="#ライブラリ">ライブラリ</a></li>
+                          <li><a href="#gui">GUI</a></li>
+                          <li><a href="#評価ツール">評価ツール</a></li>
+                          <li><a href="#webサイト">Webサイト</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#gui-1">GUI</a></li>
+                      <li><a href="#断念した機能">断念した機能</a>
+                        <ul>
+                          <li><a href="#connect-1"><code>Connect</code></a></li>
+                          <li><a href="#webサイト-1">Webサイト</a></li>
+                          <li><a href="#評価ツール-1">評価ツール</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#パスワードについて">パスワードについて</a></li>
+                      <li><a href="#おわりに">おわりに</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </details>
+
+
+              <script>
+                (function () {
+                  'use strict'
+
+                  const SCROLL_OFFSET_RATIO = 0.33
+                  const TOC_SELECTOR = '#TableOfContents'
+                  const ANCHOR_SELECTOR = '.anchor'
+                  const TOC_LINK_SELECTOR = 'a[href^="#"]'
+                  const NESTED_LIST_SELECTOR = 'li ul'
+                  const ACTIVE_CLASS = 'active'
+
+                  function getActiveAnchorId(anchors, offsetRatio) {
+                    const threshold = window.scrollY + window.innerHeight * offsetRatio
+                    const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+                    const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+                    for (let i = anchors.length - 1; i >= 0; i--) {
+                      const top = anchors[i].getBoundingClientRect().top + window.scrollY
+                      if (top <= threshold && tocIds.has(anchors[i].id)) {
+                        return anchors[i].id
+                      }
+                    }
+                    return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+                  }
+
+                  function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+                    const activeId = getActiveAnchorId(anchors, scrollOffset)
+                    if (!activeId) return
+
+                    links.forEach(link => {
+                      const isActive = link.getAttribute('href') === `#${activeId}`
+                      link.classList.toggle(ACTIVE_CLASS, isActive)
+
+                      if (collapseInactive) {
+                        const ul = link.closest('li')?.querySelector('ul')
+                        if (ul) ul.style.display = isActive ? '' : 'none'
+                      }
+                    })
+
+                    if (collapseInactive) {
+                      const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+                      let el = activeLink
+                      while (el && el !== toc) {
+                        if (el.tagName === 'UL') el.style.display = ''
+                        if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+                        el = el.parentElement
+                      }
+                    }
+                  }
+
+                  function initTOC() {
+                    const toc = document.querySelector(TOC_SELECTOR)
+                    if (!toc) return
+
+                    const collapseInactive = false
+                    const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+                    const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+                    if (collapseInactive) {
+                      toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+                    }
+
+                    const config = {
+                      toc,
+                      anchors,
+                      links,
+                      scrollOffset: SCROLL_OFFSET_RATIO,
+                      collapseInactive
+                    }
+
+                    window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+                    window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+                    updateTOC(config)
+                  }
+
+                  document.readyState === 'loading'
+                    ? document.addEventListener('DOMContentLoaded', initTOC)
+                    : initTOC()
+                })()
+              </script>
+
+
+
+
+            </div>
+          </div>
+
+
+
+          <div class="min-w-0 min-h-0 max-w-fit">
+
+
+            <div class="article-content max-w-prose mb-20">
+              <div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+
+              </div>
+
+              <div id="password-gate">
+                <input type="password" id="passwordInput" placeholder="パスワードを入力">
+              <button onclick="decryptContent()">内容を復号する</button>
+              </div>
+
+              <figure>
+                <img class="my-0 rounded-md" srcset="
+          /img/feature_hu_b5868d247b532db8.jpg 330w,
+          /img/feature_hu_8bf6de57006beb85.jpg 660w,
+          /img/feature_hu_81c7f87399fe03fa.jpg 1024w,
+          /img/feature_hu_6554f7d4b89328ec.jpg 2x" src="/img/feature_hu_8bf6de57006beb85.jpg"
+                  data-zoom-src="/img/feature_hu_6554f7d4b89328ec.jpg" alt="会場への道" />
+
+                <figcaption>大橋川から</figcaption>
+              </figure>
+
+
+              <div id="encrypted-text1">本記事は限定公開です。</div>
+              <blockquote class="twitter-tweet">
+                <p lang="ja" dir="ltr">群馬チームでは、問題取得・回答提出・タスクの発行用内部サーバとしてSiv3Dを使用しました<a
+                    href="https://twitter.com/hashtag/procon36?src=hash&amp;ref_src=twsrc%5Etfw">#procon36</a> <a
+                    href="https://twitter.com/hashtag/OpenSiv3D?src=hash&amp;ref_src=twsrc%5Etfw">#OpenSiv3D</a> <a
+                    href="https://t.co/7sV6CFP5mr">https://t.co/7sV6CFP5mr</a> <a
+                    href="https://t.co/WaR3aejcL0">pic.twitter.com/WaR3aejcL0</a></p>&mdash; ゆきどけ (@yukidoke_winter) <a
+                  href="https://twitter.com/yukidoke_winter/status/1977780215096209827?ref_src=twsrc%5Etfw">October 13,
+                  2025</a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <div id="encrypted-text2"></div>
+              <div id="gallery-390f893a124298fd10f8bcfb5ce0539c" class="gallery">
+
+                <img src="/img/01.jpg" class="grid-w33" />
+                <img src="/img/02.jpg" class="grid-w33" />
+                <img src="/img/03.jpg" class="grid-w33" />
+                <img src="/img/04.jpg" class="grid-w33" />
+                <img src="/img/05.jpg" class="grid-w33" />
+                <img src="/img/06.jpg" class="grid-w33" />
+                <img src="/img/07.jpg" class="grid-w33" />
+                <img src="/img/08.jpg" class="grid-w33" />
+                <img src="/img/09.jpg" class="grid-w33" />
+                <img src="/img/10.jpg" class="grid-w33" />
+                <img src="/img/11.jpg" class="grid-w33" />
+                <img src="/img/12.jpg" class="grid-w33" />
+              </div>
+
+              <script src="script.js"></script>
+            </div>
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <script type="text/javascript"
+            src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+            integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+            data-oid="views_index.md" data-oid-likes="likes_index.md"></script>
+
+        </section>
+
+
+        <footer class="pt-8 max-w-prose print:hidden">
+
+
+
+
+
+        </footer>
+      </article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0 z-10">
+        <a href="#the-top"
+          class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+          aria-label="TOPへスクロール" title="TOPへスクロール">
+          &uarr;
+        </a>
+      </div>
+
+    </main>
+    <footer id="site-footer" class="py-10 print:hidden">
+
+
+
+
+      <div class="flex items-center justify-between">
+
+
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          yukidoke
+        </p>
+
+
+
+
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+
+
+          <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://gohugo.io/"
+            target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a
+            class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://blowfish.page/"
+            target="_blank" rel="noopener noreferrer">Blowfish</a> で構築されています
+        </p>
+
+      </div>
+
+      <script>
+        mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+          margin: 24,
+          background: "rgba(0,0,0,0.5)",
+          scrollOffset: 0,
+        });
+      </script>
+
+
+
+      <script type="text/javascript"
+        src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+        integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+
+
+    </footer>
+
+  </div>
 </body>
 
 </html>
